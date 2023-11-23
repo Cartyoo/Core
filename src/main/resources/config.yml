@@ -1,0 +1,30 @@
+
+
+prefix: '&8[&a&lCORE&8] &f'
+
+messages:
+
+  #Placeholders:
+  #   %target% - The targeted player
+  #   %gamemode% - The gamemode specified
+
+  gmc: '&fYour gamemode has been updated to Creative.'
+  gmc-other: '&fYou have updated %target%''s gamemode to Creative!'
+
+  gms: '&fYour gamemode has been updated to Survival.'
+  gms-other: '&fYou have updated %target%''s gamemode to Survival.'
+
+  gmsp: '&fYour gamemode has been updated to Spectator.'
+  gmsp-other: '&fYou have updated %target%''s gamemode to Spectator.'
+
+  gma: '&fYour gamemode has been updated to Adventure.'
+  gma-other: '&fYou have updated %target%''s gamemode to Adventure.'
+
+  gamemode: '&fYour gamemode has been updated to %gamemode%'
+  gamemode-other: '&fYou have updated %target%''s gamemode to %gamemode%'
+
+
+  fly-enable: '&fYour flight has been enabled.'
+  fly-disable: '&fYour flight has been disabled.'
+  fly-enable-other: '&fYou have enabled %target%''s flight.'
+  fly-disable-other: '&fYou have disabled %target%''s flight.'
