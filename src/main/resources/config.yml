@@ -28,3 +28,11 @@ messages:
   fly-disable: '&fYour flight has been disabled.'
   fly-enable-other: '&fYou have enabled %target%''s flight.'
   fly-disable-other: '&fYou have disabled %target%''s flight.'
+
+  setspawn: '&fYou have set the server spawn to your location.'
+  spawn: '&fYou have teleported to Spawn!'
+  sent-to-spawn: '&fYou have sent %target% to Spawn.'
+
+  setwarp: '&fYou have se the warp "%warpname%" to your location.'
+  warp-not-found: '&fNo warp with the name "%warpname%" was found.'
+  warped: '&fYou have warped to "%warpname%".'
