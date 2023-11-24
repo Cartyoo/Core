@@ -21,7 +21,7 @@ public class FlyCommand extends BaseCommand {
             if(player.getAllowFlight()) {
                 player.setFlying(false);
                 player.setAllowFlight(false);
-                player.sendMessage(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.fly-disable"));
+                player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.fly-disable")));
             } else {
                 player.setAllowFlight(true);
                 player.setFlying(true);

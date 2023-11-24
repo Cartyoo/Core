@@ -29,7 +29,12 @@ public final class Core extends JavaPlugin {
                 new GMACommand(),
                 new GMSPCommand(),
                 new GamemodeCommand(),
-                new FlyCommand()
+                new FlyCommand(),
+                new SetSpawnCommand(),
+                new SpawnCommand(),
+                new WarpCommand(),
+                new DeleteWarpCommand(),
+                new SetWarpCommand()
         ).forEach(manager::registerCommand);
 
     }

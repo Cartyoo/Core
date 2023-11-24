@@ -15,12 +15,10 @@ public class SetWarpCommand extends BaseCommand {
     @CommandPermission("core.command.setwarp")
     @Syntax("<warpName>")
 
-    public static void onCommand(Player player, String[] args) {
+    public static void onCommand(Player player, String warpName) {
 
-        if(args.length == 1) {
-            WarpUtils.createWarp(args[0], player.getLocation());
-            player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.setwarp").replaceAll("%warpname%", args[0])));
-        }
+        WarpUtils.createWarp(warpName, player.getLocation());
+        player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.setwarp").replaceAll("%warpname%", warpName)));
 
     }
 

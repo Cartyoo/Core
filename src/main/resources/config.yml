@@ -33,6 +33,7 @@ messages:
   spawn: '&fYou have teleported to Spawn!'
   sent-to-spawn: '&fYou have sent %target% to Spawn.'
 
-  setwarp: '&fYou have se the warp "%warpname%" to your location.'
+  setwarp: '&fYou have set the warp "%warpname%" to your location.'
   warp-not-found: '&fNo warp with the name "%warpname%" was found.'
   warped: '&fYou have warped to "%warpname%".'
+  deleted-warp: '&fYou have deleted the warp "%warpname%".'
