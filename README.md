@@ -14,13 +14,22 @@ Core is currently only tested on the latest version of Minecraft (1.20.2). Core 
 - /gms [player]
 - /gmsp [player]
 - /gma [player]
-- /gamemode <gamemode> [player]
-- /fly [player]
+- /gamemode|/gm <gamemode> [player]
+- /fly|/f [player]
 - /setspawn
 - /spawn [player]
 - /warp <warpname>
-- /setWarp <warpName>
-- /deleteWarp <warpName>
+- /setwarp|/createwarp <warpName>
+- /deletewarp|/delwarp <warpName>
+- /weather <weather>
+- /sun
+- /thunder|/lightning
+- /rain|/storm
+- /clearchat|/cc
+- /heal
+- /renameitem|/itemrename|/rename <string>
+- /clear|/clearinventory|/ci
+
 # Other (Events/Listeners)
 - Join & Leave Messages
 
@@ -30,6 +39,7 @@ Core is currently only tested on the latest version of Minecraft (1.20.2). Core 
 - Open-Source; Core is open source! You can contribute via GitHub, view Core's code, and compile for yourself!
 
 *speaking of compilation...*
+
 # How to compile
 You can compile Core as a JAR file to use in your Minecraft server by:
 1. Download all the code
@@ -37,9 +47,12 @@ You can compile Core as a JAR file to use in your Minecraft server by:
 3. Open your terminal in the same directory of the code
 4. For Ubuntu Users, do `sudo chmod -R 777 ./gradlew`
 5. For Ubuntu Users, do `./gradlew shadowJar`
-6. For Windows users, do `gradlew.bat shadowJar` (UNTESTED)
-7. Find the JAR file named `Core-1.0-SNAPSHOT-all.jar` in `/build/libs`, then put it in your `/plugins` folder on your server.
+6. For Windows Users, do `gradlew.bat shadowJar`
+7. Find the JAR file named `Core-[version]-all.jar` in `build/libs`, then put it in your `/plugins` folder on your server.
 8. Restart
 
-# Other
+# Contributions
 If you have any suggestions, feel free to contribute!
+
+#TODO
+- Add seperate permissions for commands that have a target. Example `/fly doebert` will have the permission `core.command.fly.others` while `/fly` will only require `core.command.fly`
