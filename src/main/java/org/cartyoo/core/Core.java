@@ -18,7 +18,14 @@ public final class Core extends JavaPlugin {
 
         instance = this;
         this.saveDefaultConfig();
-        prefix = this.getConfig().getString("prefix");
+
+        if(this.getConfig().getString("prefix") == null) {
+            prefix = "&8[&a&lCORE&8] ";
+        } else {
+            prefix = this.getConfig().getString("prefix");
+        }
+
+
         BukkitCommandManager manager = new BukkitCommandManager(this);
 
         Arrays.asList(
@@ -40,7 +47,19 @@ public final class Core extends JavaPlugin {
 
                 new WarpCommand(),
                 new DeleteWarpCommand(),
-                new SetWarpCommand()
+                new SetWarpCommand(),
+
+                //new GiveCommand(), //Removed temporarily due to not working
+
+                new RenameItemCommand(),
+
+                new ClearInventoryCommand(),
+
+                new ClearChatCommand(),
+
+                new HealCommand()
+
         ).forEach(manager::registerCommand);
+
     }
 }

@@ -24,16 +24,33 @@ messages:
   gamemode-other: '&fYou have updated %target%''s gamemode to %gamemode%'
 
 
-  fly-enable: '&fYour flight has been enabled.'
-  fly-disable: '&fYour flight has been disabled.'
-  fly-enable-other: '&fYou have enabled %target%''s flight.'
-  fly-disable-other: '&fYou have disabled %target%''s flight.'
+  fly-enable: '&aYour flight has been enabled.'
+  fly-disable: '&cYour flight has been disabled.'
+  fly-enable-other: '&aYou have enabled %target%''s flight.'
+  fly-disable-other: '&cYou have disabled %target%''s flight.'
 
   setspawn: '&fYou have set the server spawn to your location.'
-  spawn: '&fYou have teleported to Spawn!'
-  sent-to-spawn: '&fYou have sent %target% to Spawn.'
+  spawn: '&aYou have teleported to Spawn!'
+  sent-to-spawn: '&faYou have sent %target% to Spawn.'
 
   setwarp: '&fYou have set the warp "%warpname%" to your location.'
-  warp-not-found: '&fNo warp with the name "%warpname%" was found.'
-  warped: '&fYou have warped to "%warpname%".'
-  deleted-warp: '&fYou have deleted the warp "%warpname%".'
+  warp-not-found: '&cNo warp with the name "%warpname%" was found.'
+  warped: '&aYou have warped to "%warpname%".'
+  deleted-warp: '&cYou have deleted the warp "%warpname%".'
+
+  inventory-full: '&cYour inventory is full.'
+  other-inventory-full: '&c%target%''s inventory is full.'
+
+  given-item: '&aYou have given yourself %amount%x of %item%.'
+  given-other-item: '&aYou have given %target% %amount%x of %item%.'
+
+  rename-blocked: '&cYou can not rename this item.'
+  renamed: '&aYou have renamed your current item to %name%.'
+
+  inventory-cleared: '&aYour inventory has been cleared.'
+  inventory-cleared-other: '&aYou have cleared %target%''s inventory.'
+
+  cleared-chat-announcement: '&a%player% has cleared the chat.'
+
+  healed: '&aYou have been healed.'
+  healed-other: '&aYou have healed %target%.'
