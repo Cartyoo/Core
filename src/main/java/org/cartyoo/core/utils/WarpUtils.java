@@ -11,7 +11,6 @@ import java.util.Set;
 
 public class WarpUtils {
 
-    // Method to save warp location to YAML file
     public static void createWarp(String warpName, Location location) {
         File configFile = new File(Core.getInstance().getDataFolder(), "warps.yml");
         FileConfiguration config = YamlConfiguration.loadConfiguration(configFile);
@@ -30,7 +29,6 @@ public class WarpUtils {
         }
     }
 
-    // Method to delete a warp from the YAML file
     public static void deleteWarp(String warpName) {
         File configFile = new File(Core.getInstance().getDataFolder(), "warps.yml");
         FileConfiguration config = YamlConfiguration.loadConfiguration(configFile);
@@ -44,7 +42,6 @@ public class WarpUtils {
         }
     }
 
-    // Method to get a warp location from YAML file
     public static Location getWarpLocation(String warpName) {
         File configFile = new File(Core.getInstance().getDataFolder(), "warps.yml");
         FileConfiguration config = YamlConfiguration.loadConfiguration(configFile);
@@ -65,7 +62,6 @@ public class WarpUtils {
         return null;
     }
 
-    // Method to get a set of all warp names
     public Set<String> getWarpNames() {
         File configFile = new File(Core.getInstance().getDataFolder(), "warps.yml");
         FileConfiguration config = YamlConfiguration.loadConfiguration(configFile);
