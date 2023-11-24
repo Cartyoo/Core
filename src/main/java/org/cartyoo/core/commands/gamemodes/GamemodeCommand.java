@@ -1,4 +1,4 @@
-package org.cartyoo.core.commands;
+package org.cartyoo.core.commands.gamemodes;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.*;
@@ -9,16 +9,13 @@ import org.cartyoo.core.Core;
 import org.cartyoo.core.utils.CC;
 
 public class GamemodeCommand extends BaseCommand {
-
     @CommandAlias("gamemode|gm")
     @CommandCompletion("@players|creative|survival|spectator|adventure")
     @Syntax("<gamemode> [player]")
     @CommandPermission("core.command.gamemode")
 
     public static void onCommand(Player player, GameMode gamemode, @Optional OfflinePlayer target) {
-
         if(target == null) {
-
             player.setGameMode(gamemode);
             player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.gamemode").replaceAll("%gamemode%", gamemode.toString())));
 
@@ -27,7 +24,6 @@ public class GamemodeCommand extends BaseCommand {
             player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.gamemode-other").replaceAll("%gamemode%", gamemode.toString()).replaceAll("%target%", target.getName())));
             target.getPlayer().sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.gamemode").replaceAll("%gamemode%", gamemode.toString())));
         }
-
     }
-
 }
+

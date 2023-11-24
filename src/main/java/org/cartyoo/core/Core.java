@@ -4,6 +4,7 @@ import co.aikar.commands.BukkitCommandManager;
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.cartyoo.core.commands.*;
+import org.cartyoo.core.commands.gamemodes.*;
 
 import java.util.Arrays;
 
@@ -24,11 +25,11 @@ public final class Core extends JavaPlugin {
         BukkitCommandManager manager = new BukkitCommandManager(this);
 
         Arrays.asList(
-                new GMCCommand(),
-                new GMSCommand(),
-                new GMACommand(),
-                new GMSPCommand(),
                 new GamemodeCommand(),
+                new GMACommand(),
+                new GMSCommand(),
+                new GMCCommand(),
+                new GMSPCommand(),
                 new FlyCommand(),
                 new SetSpawnCommand(),
                 new SpawnCommand(),
