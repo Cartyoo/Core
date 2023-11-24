@@ -61,3 +61,14 @@ messages:
   weather-sun: '&aWeather is now sun.'
   weather-storm: '&aWeather is now storm.'
   weather-thunder: '&aWeather is now thunder.'
+
+
+
+chat:
+  enabled: true
+
+  chatcolor-permission: 'core.chatcolor'
+
+  chatcolor-format: '%vault_prefix% &f%player_name%&f: %message%'
+
+  default-format: '&8[&7&lDEFAULT&8] &f%player_name%&f: %message%'
