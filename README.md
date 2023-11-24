@@ -31,7 +31,7 @@ You can compile Core as a JAR file to use in your Minecraft server by:
 1. Download all the code
 2. Download Gradle (https://gradle.org/install/)
 3. Open your terminal
-4. For Ubuntu users only, do `sudo chmod -R 777 ./gradlew`
+4. For Ubuntu Users only, do `sudo chmod -R 777 ./gradlew`
 5. For Ubuntu Users only, do `./gradlew shadowJar`
 6. For Windows users, do `gradlew.bat shadowJar` (UNTESTED)
 7. Find the JAR file named `Core-1.0-SNAPSHOT-all.jar` in `/build/libs`, then put it in your `/plugins` folder on your server.
