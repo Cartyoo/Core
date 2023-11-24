@@ -10,13 +10,17 @@ Answer: Download the latest file from the "releases" tab, put it in your /plugin
 Core is currently only tested on the latest version of Minecraft (1.20.2). Core may still work on outdated versions down to 1.17.1 (NOT GUARENTEED OR TESTED)
 
 # Commands
-- /gmc <player>
-- /gms <player>
-- /gmsp <player>
-- /gma <player>
+- /gmc [player]
+- /gms [player]
+- /gmsp [player]
+- /gma [player]
 - /gamemode <gamemode> [player]
-- /fly <player>
-
+- /fly [player]
+- /setspawn
+- /spawn [player]
+- /warp <warpname>
+- /setWarp <warpName>
+- /deleteWarp <warpName>
 # Other (Events/Listeners)
 - Join & Leave Messages
 
