@@ -26,9 +26,9 @@ Core is currently only tested on the latest version of Minecraft (1.20.2). Core 
 - /thunder|/lightning
 - /rain|/storm
 - /clearchat|/cc
-- /heal
+- /heal [player]
 - /renameitem|/itemrename|/rename <string>
-- /clear|/clearinventory|/ci
+- /clear|/clearinventory|/ci [player]
 
 # Other (Events/Listeners)
 - Join & Leave Messages
