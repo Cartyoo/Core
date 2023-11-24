@@ -7,7 +7,7 @@ Question: How do I download and install Core on my server?
 Answer: Download the latest file from the "releases" tab, put it in your /plugins folder on your server, then restart your server!
 
 # Compatability
-Core is currently only tested on the latest version of Minecraft (1.20.2). Core may still work on outdated versions down to 1.17.1 (NOT GUARENTEED OR TESTED)
+Core is currently only tested on the latest version of Minecraft (1.20.2). Core may still work on outdated versions down to 1.17.1
 
 # Commands
 - /gmc [player]
