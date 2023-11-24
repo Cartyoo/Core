@@ -15,7 +15,6 @@ public class GMSCommand extends BaseCommand {
     @CommandPermission("core.command.gamemode.survival")
     @Syntax("[player]")
 
-
     public static void onCommand(Player player, @Optional OfflinePlayer target) {
 
         if (target == null) {
