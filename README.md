@@ -25,6 +25,10 @@ Core is currently only tested on the latest version of Minecraft (1.20.2). Core 
 - /sun
 - /thunder|/lightning
 - /rain|/storm
+- /clearchat|/cc
+- /heal
+- /renameitem|/itemrename|/rename <string>
+- /clear|/clearinventory|/ci
 
 # Other (Events/Listeners)
 - Join & Leave Messages
@@ -49,3 +53,6 @@ You can compile Core as a JAR file to use in your Minecraft server by:
 
 # Contributions
 If you have any suggestions, feel free to contribute!
+
+#TODO
+- Add seperate permissions for commands that have a target. Example `/fly doebert` will have the permission `core.command.fly.others` while `/fly` will only require `core.command.fly`
