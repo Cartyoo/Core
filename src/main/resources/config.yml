@@ -43,6 +43,7 @@ messages:
 
   given-item: '&aYou have given yourself %amount%x of %item%.'
   given-other-item: '&aYou have given %target% %amount%x of %item%.'
+  inv-full: '&cInventory of %target% is full!'
 
   rename-blocked: '&cYou can not rename this item.'
   renamed: '&aYou have renamed your current item to %name%.'

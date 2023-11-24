@@ -5,6 +5,7 @@ import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.cartyoo.core.commands.*;
 import org.cartyoo.core.commands.gamemodes.*;
+import org.cartyoo.core.commands.warps.*;
 import org.cartyoo.core.commands.weathers.*;
 import org.cartyoo.core.listeners.PlayerChatListener;
 
@@ -63,7 +64,7 @@ public final class Core extends JavaPlugin {
                 new DeleteWarpCommand(),
                 new SetWarpCommand(),
 
-                //new GiveCommand(), //Removed temporarily due to not working
+                new GiveCommand(),
 
                 new RenameItemCommand(),
 

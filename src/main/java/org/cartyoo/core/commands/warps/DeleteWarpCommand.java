@@ -1,4 +1,4 @@
-package org.cartyoo.core.commands;
+package org.cartyoo.core.commands.warps;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CommandAlias;
