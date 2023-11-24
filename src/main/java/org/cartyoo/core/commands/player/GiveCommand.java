@@ -1,9 +1,8 @@
-package org.cartyoo.core.commands;
+package org.cartyoo.core.commands.player;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.*;
 import org.bukkit.Material;
-import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.cartyoo.core.Core;
@@ -15,7 +14,7 @@ public class GiveCommand extends BaseCommand {
 
     @CommandAlias("give|i")
     @CommandPermission("core.command.give")
-    @CommandCompletion("1|32|64 @players")
+    @CommandCompletion("<item> 1|32|64 @players")
     @Syntax("<item> [amount] [player]")
 
 
