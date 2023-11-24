@@ -7,7 +7,7 @@ Question: How do I download and install Core on my server?
 Answer: Download the latest file from the "releases" tab, put it in your /plugins folder on your server, then restart your server!
 
 # Compatability
-Core is currently only tested on the latest version of Minecraft (1.20.2). Core may still work on outdated versions down to 1.17.1 (NOT GUARENTEED OR TESTED)
+Core is currently only tested on the latest version of Minecraft (1.20.2). Core may still work on outdated versions down to 1.17.1
 
 # Commands
 - /gmc [player]
@@ -26,9 +26,9 @@ Core is currently only tested on the latest version of Minecraft (1.20.2). Core 
 - /thunder|/lightning
 - /rain|/storm
 - /clearchat|/cc
-- /heal
+- /heal [player]
 - /renameitem|/itemrename|/rename <string>
-- /clear|/clearinventory|/ci
+- /clear|/clearinventory|/ci [player]
 
 # Other (Events/Listeners)
 - Join & Leave Messages
@@ -54,5 +54,5 @@ You can compile Core as a JAR file to use in your Minecraft server by:
 # Contributions
 If you have any suggestions, feel free to contribute!
 
-#TODO
+# TODO
 - Add seperate permissions for commands that have a target. Example `/fly doebert` will have the permission `core.command.fly.others` while `/fly` will only require `core.command.fly`
