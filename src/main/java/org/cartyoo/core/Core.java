@@ -5,6 +5,7 @@ import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.cartyoo.core.commands.*;
 import org.cartyoo.core.commands.gamemodes.*;
+import org.cartyoo.core.commands.weathers.*;
 
 import java.util.Arrays;
 
@@ -16,28 +17,30 @@ public final class Core extends JavaPlugin {
     public void onEnable() {
 
         instance = this;
-
         this.saveDefaultConfig();
         prefix = this.getConfig().getString("prefix");
-
-
-
         BukkitCommandManager manager = new BukkitCommandManager(this);
 
         Arrays.asList(
+                new WeatherCommand(),
+                new WeatherSunCommand(),
+                new WeatherStormCommand(),
+                new WeatherThunderCommand(),
+
                 new GamemodeCommand(),
                 new GMACommand(),
-                new GMSCommand(),
                 new GMCCommand(),
+                new GMSCommand(),
                 new GMSPCommand(),
+
                 new FlyCommand(),
+
                 new SetSpawnCommand(),
                 new SpawnCommand(),
+
                 new WarpCommand(),
                 new DeleteWarpCommand(),
                 new SetWarpCommand()
         ).forEach(manager::registerCommand);
-
     }
-
 }
