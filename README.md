@@ -54,5 +54,5 @@ You can compile Core as a JAR file to use in your Minecraft server by:
 # Contributions
 If you have any suggestions, feel free to contribute!
 
-#TODO
+# TODO
 - Add seperate permissions for commands that have a target. Example `/fly doebert` will have the permission `core.command.fly.others` while `/fly` will only require `core.command.fly`
