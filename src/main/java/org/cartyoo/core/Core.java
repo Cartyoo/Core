@@ -1,21 +1,23 @@
 package org.cartyoo.core;
 
+import co.aikar.commands.BaseCommand;
 import co.aikar.commands.BukkitCommandManager;
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.cartyoo.core.commands.*;
 import org.cartyoo.core.commands.gamemodes.*;
+import org.cartyoo.core.commands.gui.*;
+import org.cartyoo.core.commands.player.*;
+import org.cartyoo.core.commands.util.*;
 import org.cartyoo.core.commands.warps.*;
 import org.cartyoo.core.commands.weathers.*;
 import org.cartyoo.core.listeners.PlayerChatListener;
-
-import java.util.Arrays;
 
 public final class Core extends JavaPlugin {
     @Getter public static Core instance;
     @Getter public static String prefix;
     @Getter public static boolean chatPlaceholdersEnabled;
 
+    BukkitCommandManager manager = new BukkitCommandManager(this);
     @Override
     public void onEnable() {
 
@@ -40,41 +42,43 @@ public final class Core extends JavaPlugin {
             }
         }
 
-
-        BukkitCommandManager manager = new BukkitCommandManager(this);
-
-        Arrays.asList(
+        register(
                 new WeatherCommand(),
                 new SunCommand(),
                 new StormCommand(),
                 new ThunderCommand(),
-
                 new GamemodeCommand(),
                 new GMACommand(),
                 new GMCCommand(),
                 new GMSCommand(),
                 new GMSPCommand(),
-
                 new FlyCommand(),
-
                 new SetSpawnCommand(),
                 new SpawnCommand(),
-
                 new WarpCommand(),
                 new DeleteWarpCommand(),
                 new SetWarpCommand(),
-
                 new GiveCommand(),
-
                 new RenameItemCommand(),
-
                 new ClearInventoryCommand(),
-
                 new ClearChatCommand(),
+                new HealCommand(),
+                new EnderChestCommand(),
+                new HatCommand(),
+                new InvseeCommand(),
+                new DisposalCommand(),
+                new SmiteCommand(),
+                new CraftingTableCommand(),
+                new AnvilCommand(),
+                new PingCommand(),
+                new SkullCommand(),
+                new BroadcastCommand()
+        );
 
-                new HealCommand()
-
-        ).forEach(manager::registerCommand);
-
+    }
+    private void register(BaseCommand... commands) {
+        for (BaseCommand command : commands) {
+            manager.registerCommand(command);
+        }
     }
 }
