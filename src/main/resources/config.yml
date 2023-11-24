@@ -54,3 +54,10 @@ messages:
 
   healed: '&aYou have been healed.'
   healed-other: '&aYou have healed %target%.'
+
+  fed: '&aYou have been fed.'
+  fed-other: '&aYou have fed %target%.'
+
+  weather-sun: '&aWeather is now sun.'
+  weather-storm: '&aWeather is now storm.'
+  weather-thunder: '&aWeather is now thunder.'

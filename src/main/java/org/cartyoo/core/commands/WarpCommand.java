@@ -15,16 +15,12 @@ public class WarpCommand extends BaseCommand {
     @Syntax("<warpName>")
 
     public static void onCommand(Player player, String warpName) {
-
         Location warpLocation = WarpUtils.getWarpLocation(warpName);
-
-        if(warpLocation == null) {
+        if (warpLocation == null) {
             player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.warp-not-found").replaceAll("%warpname%", warpName)));
         } else {
             player.teleport(warpLocation);
             player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.warped").replaceAll("%warpname%", warpName)));
         }
-
     }
-
 }

@@ -16,8 +16,7 @@ public class SpawnCommand extends BaseCommand {
     @Syntax("")
 
     public static void onCommand(Player player, @Optional OfflinePlayer target) {
-
-        if(target == null) {
+        if (target == null) {
             player.teleport(SpawnUtils.getSpawn());
             player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.spawn")));
         } else {
@@ -27,7 +26,5 @@ public class SpawnCommand extends BaseCommand {
                 player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.sent-to-spawn").replaceAll("%target%", target.getName())));
             }
         }
-
     }
-
 }

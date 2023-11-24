@@ -15,20 +15,13 @@ public class ClearInventoryCommand extends BaseCommand {
     @CommandCompletion("@players")
 
     public static void onCommand(Player player, @Optional OfflinePlayer target) {
-
-        if(target == null) {
-
+        if (target == null) {
             player.getInventory().clear();
             player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.inventory-cleared")));
-
         } else {
-
             target.getPlayer().getInventory().clear();
             target.getPlayer().sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.inventory-cleared")));
             player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.inventory-cleared-other").replaceAll("%target%", target.getName())));
-
         }
-
     }
-
 }

@@ -16,9 +16,8 @@ public class FlyCommand extends BaseCommand {
 
 
     public static void onCommand(Player player, @Optional OfflinePlayer target) {
-        if(target == null) {
-
-            if(player.getAllowFlight()) {
+        if (target == null) {
+            if (player.getAllowFlight()) {
                 player.setFlying(false);
                 player.setAllowFlight(false);
                 player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.fly-disable")));
@@ -27,10 +26,8 @@ public class FlyCommand extends BaseCommand {
                 player.setFlying(true);
                 player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.fly-enable")));
             }
-
         } else {
-
-            if(target.getPlayer().getAllowFlight()) {
+            if (target.getPlayer().getAllowFlight()) {
                 target.getPlayer().setFlying(false);
                 target.getPlayer().setAllowFlight(false);
                 target.getPlayer().sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.fly-disable")));
@@ -41,9 +38,6 @@ public class FlyCommand extends BaseCommand {
                 target.getPlayer().sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.fly-enable")));
                 player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.fly-enable-other").replaceAll("%target%", target.getName())));
             }
-
         }
-
     }
-
 }

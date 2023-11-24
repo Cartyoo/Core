@@ -17,20 +17,13 @@ public class RenameItemCommand extends BaseCommand {
     
     
     public static void onCommand(Player player, String name) {
-
-        if(player.getInventory().getItemInMainHand().getItemMeta() == null) {
+        if (player.getInventory().getItemInMainHand().getItemMeta() == null) {
             player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.rename-blocked")));
         } else {
-
             ItemMeta meta = player.getInventory().getItemInMainHand().getItemMeta();
-
             meta.setDisplayName(CC.translate(name));
             player.getInventory().getItemInMainHand().setItemMeta(meta);
-
             player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.renamed").replaceAll("%name%", name)));
         }
-        
     }
-    
-    
 }

@@ -16,11 +16,7 @@ public class SetWarpCommand extends BaseCommand {
     @Syntax("<warpName>")
 
     public static void onCommand(Player player, String warpName) {
-
         WarpUtils.createWarp(warpName, player.getLocation());
         player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.setwarp").replaceAll("%warpname%", warpName)));
-
     }
-
-
 }

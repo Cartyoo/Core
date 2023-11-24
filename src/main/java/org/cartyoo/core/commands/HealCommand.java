@@ -18,21 +18,13 @@ public class HealCommand extends BaseCommand {
 
 
     public static void onCommand(Player player, @Optional OfflinePlayer target) {
-
-        if(target == null) {
-
+        if (target == null) {
             player.setHealthScale(20.00);
             player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.healed")));
-
         } else {
-
             target.getPlayer().setHealthScale(20.00);
             player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.healed-other").replaceAll("%target%", target.getName())));
             target.getPlayer().sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.healed")));
-
         }
-
     }
-
-
 }

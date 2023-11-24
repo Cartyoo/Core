@@ -16,14 +16,11 @@ public class DeleteWarpCommand extends BaseCommand {
     @Syntax("<warpName>")
 
     public static void onCommand(Player player, String warpName) {
-
-        if(WarpUtils.getWarpLocation(warpName) != null) {
+        if (WarpUtils.getWarpLocation(warpName) != null) {
             WarpUtils.deleteWarp(warpName);
             player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.deleted-warp").replaceAll("%awrpname%", warpName)));
         } else {
             player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.warp-not-found").replaceAll("%warpname%", warpName)));
         }
-
     }
-
 }

@@ -16,11 +16,7 @@ public class SetSpawnCommand extends BaseCommand {
     @Syntax("")
 
     public static void onCommand(Player player, String[] args) {
-
         SpawnUtils.setSpawn(player.getLocation());
         player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.setspawn")));
-
     }
-
-
 }

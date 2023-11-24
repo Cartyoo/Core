@@ -17,15 +17,9 @@ public class ClearChatCommand extends BaseCommand {
 
 
     public static void onCommand(Player player, String[] args) {
-
         for (Player players : Bukkit.getOnlinePlayers()) {
-            for (int i = 0; i < 500; i++) {
-                player.sendMessage(" ");
-            }
+            players.sendMessage(" ".repeat(500));
         }
         Bukkit.getServer().broadcastMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig().getString("messages.cleared-chat-announcement").replaceAll("%player%", player.getName())));
-
     }
-
-
 }
