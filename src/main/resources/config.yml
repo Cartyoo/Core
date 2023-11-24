@@ -62,6 +62,11 @@ messages:
   weather-storm: '&aWeather is now storm.'
   weather-thunder: '&aWeather is now thunder.'
 
+  message-self: '&cYou can not message yourself.'
+  message-sender: '&8[&eYou → %target%&8] &f%message%'
+  message-receiver: '&8[&e%sender% → You&8] &f%message%'
+  no-reply: '&cYou have no one to reply to.'
+
 
 
 chat:

@@ -71,7 +71,10 @@ public final class Core extends JavaPlugin {
 
                 new ClearChatCommand(),
 
-                new HealCommand()
+                new HealCommand(),
+
+                new MessageCommand(),
+                new ReplyCommand()
 
         ).forEach(manager::registerCommand);
 
