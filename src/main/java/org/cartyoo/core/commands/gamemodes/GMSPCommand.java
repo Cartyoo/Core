@@ -9,7 +9,7 @@ import org.cartyoo.core.Core;
 import org.cartyoo.core.utils.CC;
 
 public class GMSPCommand extends BaseCommand {
-    @CommandAlias("gmsp")
+    @CommandAlias("gmsp")//
     @CommandCompletion("@players")
     @CommandPermission("core.command.gamemode.spectator")
     @Syntax("[player]")
