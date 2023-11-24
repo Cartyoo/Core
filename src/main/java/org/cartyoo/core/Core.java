@@ -23,9 +23,9 @@ public final class Core extends JavaPlugin {
 
         Arrays.asList(
                 new WeatherCommand(),
-                new WeatherSunCommand(),
-                new WeatherStormCommand(),
-                new WeatherThunderCommand(),
+                new SunCommand(),
+                new StormCommand(),
+                new ThunderCommand(),
 
                 new GamemodeCommand(),
                 new GMACommand(),
