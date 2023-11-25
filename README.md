@@ -38,7 +38,7 @@ Some things in Core need extra setup, please refer to https://github.com/Cartyoo
 - /skull [player]
 - /feed [player]
 - /hat|/helmet
-- 
+- /kill [player]
 
 # Other (Events/Listeners)
 - Join & Leave Messages
