@@ -1,4 +1,4 @@
-package org.cartyoo.core.commands.weathers;
+package org.cartyoo.core.commands.weather;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CommandAlias;
