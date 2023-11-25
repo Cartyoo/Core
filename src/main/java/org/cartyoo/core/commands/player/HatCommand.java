@@ -9,10 +9,11 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
 public class HatCommand extends BaseCommand {
-    @CommandAlias("hat|helm")
+    @CommandAlias("hat|helmet")
     @CommandPermission("core.command.hat")
     @Syntax("")
-    public static void onCommand(Player player) {
+
+    public static void onCommand(Player player, String[] args) {
         PlayerInventory inv = player.getInventory();
         ItemStack hat = inv.getItemInMainHand();
         inv.setHelmet(hat);

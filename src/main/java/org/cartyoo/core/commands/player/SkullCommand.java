@@ -13,6 +13,7 @@ public class SkullCommand extends BaseCommand {
     @CommandPermission("core.command.skull")
     @Syntax("[player]")
     @CommandCompletion("@players")
+
     public static void onCommand(Player player, @Optional String target) {
         if (target == null){
             ItemStack head = new ItemStack(Material.PLAYER_HEAD);

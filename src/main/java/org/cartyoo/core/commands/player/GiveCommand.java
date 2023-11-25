@@ -14,7 +14,7 @@ public class GiveCommand extends BaseCommand {
 
     @CommandAlias("give|i")
     @CommandPermission("core.command.give")
-    @CommandCompletion("<item> 1|32|64 @players")
+    @CommandCompletion("@items 1|32|64 @players")
     @Syntax("<item> [amount] [player]")
 
 

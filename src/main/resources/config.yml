@@ -84,3 +84,6 @@ chat:
   chatcolor-format: '%vault_prefix% &f%player_name%&f: %message%'
 
   default-format: '&8[&7&lDEFAULT&8] &f%player_name%&f: %message%'
+
+list:
+  enabled: true #Requires LuckPerms (https://luckperms.net)

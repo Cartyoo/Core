@@ -32,6 +32,13 @@ Some things in Core need extra setup, please refer to https://github.com/Cartyoo
 - /heal [player]
 - /renameitem|/itemrename|/rename <string>
 - /clear|/clearinventory|/ci [player]
+- /list
+- /trash|/bin|/disposal
+- /ping [player]
+- /skull [player]
+- /feed [player]
+- /hat|/helmet
+- 
 
 # Other (Events/Listeners)
 - Join & Leave Messages

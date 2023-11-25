@@ -12,12 +12,10 @@ public class PlayerChatListener implements Listener {
     @EventHandler
     public void onChat(AsyncPlayerChatEvent event) {
 
-        if (Core.isChatPlaceholdersEnabled()) {
-            if (event.getPlayer().hasPermission(Core.getInstance().getConfig().getString("chat.chatcolor-permission"))) {
-                event.setFormat(CC.translate(PlaceholderAPI.setPlaceholders(event.getPlayer(), Core.getInstance().getConfig().getString("chat.chatcolor-format").replaceAll("%message%", event.getMessage()))));
-            } else {
-                event.setFormat(CC.translate(PlaceholderAPI.setPlaceholders(event.getPlayer(), Core.getInstance().getConfig().getString("chat.default-format").replaceAll("%message%", event.getMessage()))));
-            }
+        if (event.getPlayer().hasPermission(Core.getInstance().getConfig().getString("chat.chatcolor-permission"))) {
+            event.setFormat(CC.translate(PlaceholderAPI.setPlaceholders(event.getPlayer(), Core.getInstance().getConfig().getString("chat.chatcolor-format").replaceAll("%message%", event.getMessage()))));
+        } else {
+            event.setFormat(CC.translate(PlaceholderAPI.setPlaceholders(event.getPlayer(), Core.getInstance().getConfig().getString("chat.default-format").replaceAll("%message%", event.getMessage()))));
         }
     }
 }
