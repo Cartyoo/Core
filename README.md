@@ -9,6 +9,9 @@ Answer: Download the latest file from the "releases" tab, put it in your /plugin
 # Compatability
 Core is currently only tested on the latest version of Minecraft (1.20.2). Core may still work on outdated versions down to 1.17.1
 
+# Setup
+Some things in Core need extra setup, please refer to https://github.com/Cartyoo/Core/blob/main/SETUP.MD
+
 # Commands
 - /gmc [player]
 - /gms [player]
@@ -32,24 +35,12 @@ Core is currently only tested on the latest version of Minecraft (1.20.2). Core 
 
 # Other (Events/Listeners)
 - Join & Leave Messages
+- Chat Format
 
 # Why choose Core?
 - Core is fully configurable via ONE file; change every message, prefix, and more in the config YAML file.
 - Support; add herbert__ on Discord for support for Core related issues.
 - Open-Source; Core is open source! You can contribute via GitHub, view Core's code, and compile for yourself!
-
-*speaking of compilation...*
-
-# How to compile
-You can compile Core as a JAR file to use in your Minecraft server by:
-1. Download all the code
-2. Download Gradle (https://gradle.org/install/)
-3. Open your terminal in the same directory of the code
-4. For Ubuntu Users, do `sudo chmod -R 777 ./gradlew`
-5. For Ubuntu Users, do `./gradlew shadowJar`
-6. For Windows Users, do `gradlew.bat shadowJar`
-7. Find the JAR file named `Core-[version]-all.jar` in `build/libs`, then put it in your `/plugins` folder on your server.
-8. Restart
 
 # Contributions
 If you have any suggestions, feel free to contribute!
