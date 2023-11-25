@@ -11,7 +11,10 @@ import org.cartyoo.core.commands.gui.*;
 import org.cartyoo.core.commands.player.*;
 import org.cartyoo.core.commands.util.*;
 import org.cartyoo.core.commands.warps.*;
-import org.cartyoo.core.commands.weathers.*;
+import org.cartyoo.core.commands.weather.StormCommand;
+import org.cartyoo.core.commands.weather.SunCommand;
+import org.cartyoo.core.commands.weather.ThunderCommand;
+import org.cartyoo.core.commands.weather.WeatherCommand;
 import org.cartyoo.core.listeners.PlayerChatListener;
 
 import java.util.Arrays;
@@ -21,7 +24,7 @@ public final class Core extends JavaPlugin {
     @Getter public static String prefix;
     @Getter public static boolean chatPlaceholdersEnabled;
     @Getter public static BukkitCommandManager manager;
-
+//
 
     @Override
     public void onEnable() {
