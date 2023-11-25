@@ -18,60 +18,60 @@ public class GiveCommand extends BaseCommand {
     @Syntax("<item> [amount] [player]")
 
 
-    public void onCommand(Player player, Material item, @Optional int amount, @Optional Player target) {
+    public void onCommand(Player player, String item, @Optional int amount, @Optional Player target) {
         //TODO: fix
 
         if (amount == 0){
-            final ItemStack Item = new ItemStack(item, 1);
+            final ItemStack Item = new ItemStack(Material.valueOf(item), 1);
             final Map<Integer, ItemStack> map = player.getInventory().addItem(Item);
             if (!map.isEmpty()) {
                 player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig()
                         .getString("messages.inv-full")
-                        .replaceAll("%item%", item.toString())
+                        .replaceAll("%item%", item)
                         .replaceAll("%amount%", "1")
                         .replaceAll("%target%", player.getName())));
             }
             else{
                 player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig()
                         .getString("messages.given-item")
-                        .replaceAll("%item%", item.toString())
+                        .replaceAll("%item%", item)
                         .replaceAll("%amount%", "1")
                         .replaceAll("%target%", player.getName())));
             }
         }
         else{
             if (target == null){
-                final ItemStack Item = new ItemStack(item, amount);
+                final ItemStack Item = new ItemStack(Material.valueOf(item), amount);
                 final Map<Integer, ItemStack> map = player.getInventory().addItem(Item);
                 if (!map.isEmpty()) {
                     player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig()
                             .getString("messages.inv-full")
-                            .replaceAll("%item%", item.toString())
+                            .replaceAll("%item%", item)
                             .replaceAll("%amount%", String.valueOf(amount))
                             .replaceAll("%target%", player.getName())));
                 }
                 else{
                     player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig()
                             .getString("messages.given-item")
-                            .replaceAll("%item%", item.toString())
+                            .replaceAll("%item%", item)
                             .replaceAll("%amount%", String.valueOf(amount))
                             .replaceAll("%target%", player.getName())));
                 }
             }
             else{
-                final ItemStack Item = new ItemStack(item, amount);
+                final ItemStack Item = new ItemStack(Material.valueOf(item), amount);
                 final Map<Integer, ItemStack> map = target.getInventory().addItem(Item);
                 if (!map.isEmpty()) {
                     player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig()
                             .getString("messages.inv-full")
-                            .replaceAll("%item%", item.toString())
+                            .replaceAll("%item%", item)
                             .replaceAll("%amount%", String.valueOf(amount))
                             .replaceAll("%target%", target.getName())));
                 }
                 else{
                     player.sendMessage(CC.translate(Core.getPrefix() + Core.getInstance().getConfig()
                             .getString("messages.given-other-item")
-                            .replaceAll("%item%", item.toString())
+                            .replaceAll("%item%", item)
                             .replaceAll("%amount%", String.valueOf(amount))
                             .replaceAll("%target%", target.getName())));
                 }

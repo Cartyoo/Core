@@ -18,6 +18,7 @@ import org.cartyoo.core.commands.weather.WeatherCommand;
 import org.cartyoo.core.listeners.PlayerChatListener;
 
 import java.util.Arrays;
+import java.util.Collection;
 
 public final class Core extends JavaPlugin {
     @Getter public static Core instance;
@@ -52,8 +53,14 @@ public final class Core extends JavaPlugin {
 
         manager = new BukkitCommandManager(this);
 
+        ImmutableList.Builder<String> builder = ImmutableList.builder();
+        Material[] materials = Material.values();
+        for (Material material : materials) {
+            builder.add(material.name());
+        }
+
         manager.getCommandCompletions().registerCompletion("items", c ->
-                ImmutableList.of(Arrays.toString(Material.values()))
+                builder.build()
         );
 
 
