@@ -17,12 +17,10 @@ import org.cartyoo.core.commands.weather.ThunderCommand;
 import org.cartyoo.core.commands.weather.WeatherCommand;
 import org.cartyoo.core.listeners.PlayerChatListener;
 
-import java.util.Arrays;
-import java.util.Collection;
-
 public final class Core extends JavaPlugin {
     @Getter public static Core instance;
     @Getter public static String prefix;
+    @Getter public static boolean chatPlaceholdersEnabled;
     @Getter public static BukkitCommandManager manager;
 
     @Override
@@ -42,8 +40,10 @@ public final class Core extends JavaPlugin {
                 this.getLogger().severe("Chat format is enabled, and Placeholders are in use, but PlaceholderAPI is not found. Chat format is now disabled.");
                 this.getLogger().severe("Please download PlaceholderAPI to continue using chat format, or disable it in /plugins/Core/config.yml");
                 //this.getConfig().set("chat.enabled", false);
+                chatPlaceholdersEnabled = false;
             } else {
                 this.getServer().getPluginManager().registerEvents(new PlayerChatListener(), this);
+                chatPlaceholdersEnabled = true;
             }
         }
 
