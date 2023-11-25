@@ -10,6 +10,7 @@ public class EnderChestCommand extends BaseCommand {
     @CommandPermission("core.command.enderchest")
     @Syntax("[player]")
     @CommandCompletion("@players")
+
     public static void onCommand(Player player, @Optional OfflinePlayer target) {
         if (target == null) {
             player.openInventory(player.getEnderChest());

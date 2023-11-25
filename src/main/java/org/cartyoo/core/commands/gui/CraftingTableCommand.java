@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 public class CraftingTableCommand extends BaseCommand {
     @CommandAlias("craft|workbench")
     @CommandPermission("core.command.craft")
-    public static void onCommand(Player player) {
+    public static void onCommand(Player player, String[] args) {
         player.openWorkbench(player.getLocation(), true);
     }
 }

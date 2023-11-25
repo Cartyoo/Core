@@ -9,8 +9,9 @@ public class InvseeCommand extends BaseCommand {
     @CommandPermission("core.command.invsee")
     @Syntax("[player]")
     @CommandCompletion("@players")
-    public static void onCommand(Player player, Player target) {
-        if (target == null) {
+
+    public static void onCommand(Player player, @Optional Player target) {
+        if(target == null) {
             player.openInventory(player.getInventory());
         } else {
             player.openInventory(target.getInventory());

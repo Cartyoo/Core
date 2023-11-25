@@ -68,6 +68,12 @@ messages:
   message-receiver: '&8[&e%sender% → You&8] &f%message%'
   no-reply: '&cYou have no one to reply to.'
 
+  smite: '&fYou have smited your targeted location.'
+  smite-other: '&fYou have smited %target%.'
+
+  ping: '&aYour ping is &f%ping%ms&a.'
+  ping-other: '&a%target%''s ping is &f%ping%&a.'
+
 
 
 chat:

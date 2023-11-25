@@ -9,10 +9,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
 public class DisposalCommand extends BaseCommand {
-    @CommandAlias("disposal|bin")
+    @CommandAlias("disposal|bin|trash")
     @CommandPermission("core.command.disposal")
     @Syntax("")
-    public static void onCommand(Player player) {
+    public static void onCommand(Player player, String[] args) {
         Inventory bin = Bukkit.createInventory(player, 6, "Disposal");
         player.openInventory(bin);
     }

@@ -16,8 +16,9 @@ public final class Core extends JavaPlugin {
     @Getter public static Core instance;
     @Getter public static String prefix;
     @Getter public static boolean chatPlaceholdersEnabled;
+    @Getter public static BukkitCommandManager manager;
 
-    BukkitCommandManager manager = new BukkitCommandManager(this);
+
     @Override
     public void onEnable() {
 
@@ -41,6 +42,9 @@ public final class Core extends JavaPlugin {
                 chatPlaceholdersEnabled = true;
             }
         }
+
+        manager = new BukkitCommandManager(this);
+
 
         register(
                 new WeatherCommand(),
@@ -74,11 +78,10 @@ public final class Core extends JavaPlugin {
                 new SkullCommand(),
                 new BroadcastCommand()
         );
-
     }
     private void register(BaseCommand... commands) {
         for (BaseCommand command : commands) {
-            manager.registerCommand(command);
+            getManager().registerCommand(command);
         }
     }
 }

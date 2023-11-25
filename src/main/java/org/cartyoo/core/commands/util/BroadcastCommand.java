@@ -8,7 +8,8 @@ import org.bukkit.entity.Player;
 public class BroadcastCommand extends BaseCommand {
     @CommandAlias("broadcast|bc")
     @CommandPermission("core.command.broadcast")
-    @Syntax("")
+    @Syntax("<message>")
+
     public static void onCommand(Player player, String msg) {
         Bukkit.broadcastMessage(msg);
     }

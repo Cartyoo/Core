@@ -15,6 +15,7 @@ public class FeedCommand extends BaseCommand {
     @CommandAlias("feed|hunger")
     @CommandPermission("core.command.feed")
     @Syntax("[player]")
+
     public static void onCommand(Player player, @Optional OfflinePlayer target) {
         if (target == null) {
             player.setFoodLevel(20);

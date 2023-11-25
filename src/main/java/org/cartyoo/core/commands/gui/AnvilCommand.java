@@ -10,7 +10,7 @@ import org.bukkit.inventory.Inventory;
 public class AnvilCommand extends BaseCommand {
     @CommandAlias("anvil")
     @CommandPermission("core.command.anvil")
-    public static void onCommand(Player player) {
+    public static void onCommand(Player player, String[] args) {
         Inventory inv = Bukkit.createInventory(player, InventoryType.ANVIL);
         player.openInventory(inv);
     }
