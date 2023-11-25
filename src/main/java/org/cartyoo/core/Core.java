@@ -2,7 +2,9 @@ package org.cartyoo.core;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.BukkitCommandManager;
+import com.google.common.collect.ImmutableList;
 import lombok.Getter;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.cartyoo.core.commands.gamemodes.*;
@@ -15,6 +17,7 @@ import org.cartyoo.core.commands.warps.*;
 import org.cartyoo.core.commands.weather.*;
 import org.cartyoo.core.listeners.PlayerChatListener;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -51,6 +54,10 @@ public final class Core extends JavaPlugin {
         }
 
         manager = new BukkitCommandManager(this);
+
+        manager.getCommandCompletions().registerCompletion("items", c ->
+                ImmutableList.of(Arrays.toString(Material.values()))
+        );
 
 
         register(
