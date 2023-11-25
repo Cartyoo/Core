@@ -3,20 +3,27 @@ package org.cartyoo.core;
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.BukkitCommandManager;
 import lombok.Getter;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.cartyoo.core.commands.gamemodes.*;
 import org.cartyoo.core.commands.gui.*;
 import org.cartyoo.core.commands.player.*;
+import org.cartyoo.core.commands.social.MessageCommand;
+import org.cartyoo.core.commands.social.ReplyCommand;
 import org.cartyoo.core.commands.util.*;
 import org.cartyoo.core.commands.warps.*;
-import org.cartyoo.core.commands.weathers.*;
+import org.cartyoo.core.commands.weather.*;
 import org.cartyoo.core.listeners.PlayerChatListener;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public final class Core extends JavaPlugin {
     @Getter public static Core instance;
     @Getter public static String prefix;
     @Getter public static boolean chatPlaceholdersEnabled;
     @Getter public static BukkitCommandManager manager;
+    public static Map<Player, Player> lastSenderMap = new HashMap<>();
 
 
     @Override
@@ -76,7 +83,9 @@ public final class Core extends JavaPlugin {
                 new AnvilCommand(),
                 new PingCommand(),
                 new SkullCommand(),
-                new BroadcastCommand()
+                new BroadcastCommand(),
+                new MessageCommand(),
+                new ReplyCommand()
         );
     }
     private void register(BaseCommand... commands) {
