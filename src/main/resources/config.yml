@@ -74,6 +74,8 @@ messages:
   ping: '&aYour ping is &f%ping%ms&a.'
   ping-other: '&a%target%''s ping is &f%ping%&a.'
 
+  kill-other: '&cYou have killed %target%.'
+
 
 
 chat:

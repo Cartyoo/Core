@@ -93,7 +93,8 @@ public final class Core extends JavaPlugin {
                 new BroadcastCommand(),
                 new MessageCommand(),
                 new ReplyCommand(),
-                new ListCommand()
+                new ListCommand(),
+                new KillCommand()
         );
     }
     private void register(BaseCommand... commands) {
