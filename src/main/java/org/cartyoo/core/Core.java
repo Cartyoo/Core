@@ -47,6 +47,7 @@ public final class Core extends JavaPlugin {
             }
         }
 
+
         manager = new BukkitCommandManager(this);
 
         ImmutableList.Builder<String> builder = ImmutableList.builder();

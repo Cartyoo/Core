@@ -89,3 +89,13 @@ chat:
 
 list:
   enabled: true #Requires LuckPerms (https://luckperms.net)
+
+motd:
+  placeholder-api-enabled: false #Only set to true if you have PlaceholderAPI installed on your server.
+  lines:
+    - '&eWelcome, &6%player%&e!'
+    - '&e&lYou are playing on:'
+    - '&6dev.cartyoo.org'
+
+join-message: '' #Set to '' if you don't want a join message
+join-placeholder-api: false #Only set to true if you have PlaceholderAPI installed on your server.
