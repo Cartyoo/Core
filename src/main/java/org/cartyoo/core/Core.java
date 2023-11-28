@@ -51,7 +51,6 @@ public final class Core extends JavaPlugin {
         }
 
         this.getServer().getPluginManager().registerEvents(new CommandListener(), this);
-        File databaseFile = new File(getDataFolder().getParentFile(), "GeoLite2-City.mmdb");
 
 
         manager = new BukkitCommandManager(this);
