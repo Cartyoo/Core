@@ -82,6 +82,16 @@ messages:
   cmd-spy-error-enabled: '&cCommand spy is already enabled.'
   cmd-spy-error-disabled: '&cCommand spy is already disabled.'
 
+  player-info:
+    messages: #Messages can use PlaceholderAPI placeholders, if installed. Default placeholders are shown below.
+      - '&8---- &a&lPLAYER INFO &8----'
+      - '&aName: %name%'
+      - '&aIP: %ip%'
+      - '&aCountry: %country%'
+      - '&aCoordinates: %x%, %y%, %z%'
+      - ''
+
+
 
 chat:
   enabled: true
