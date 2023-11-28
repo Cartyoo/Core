@@ -76,6 +76,11 @@ messages:
 
   kill-other: '&cYou have killed %target%.'
 
+  command-spy: '&8[&b&lCMD&8] &f%player%: &7%command%' #No need to add a '/' as it is already included in the '%command%'.
+  cmd-spy-enabled: '&aYou have enabled command spy.'
+  cmd-spy-disabled: '&cYou have disabled command spy.'
+  cmd-spy-error-enabled: '&cCommand spy is already enabled.'
+  cmd-spy-error-disabled: '&cCommand spy is already disabled.'
 
 
 chat:
@@ -85,7 +90,7 @@ chat:
 
   chatcolor-format: '%vault_prefix% &f%player_name%&f: %message%'
 
-  default-format: '&8[&7&lDEFAULT&8] &f%player_name%&f: %message%'
+  default-format: '&7%player_name%&7: %message%'
 
 list:
   enabled: true #Requires LuckPerms (https://luckperms.net)

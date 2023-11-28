@@ -15,6 +15,7 @@ import org.cartyoo.core.commands.weather.StormCommand;
 import org.cartyoo.core.commands.weather.SunCommand;
 import org.cartyoo.core.commands.weather.ThunderCommand;
 import org.cartyoo.core.commands.weather.WeatherCommand;
+import org.cartyoo.core.listeners.CommandListener;
 import org.cartyoo.core.listeners.PlayerChatListener;
 
 public final class Core extends JavaPlugin {
@@ -46,6 +47,8 @@ public final class Core extends JavaPlugin {
                 chatPlaceholdersEnabled = true;
             }
         }
+
+        this.getServer().getPluginManager().registerEvents(new CommandListener(), this);
 
 
         manager = new BukkitCommandManager(this);
@@ -95,7 +98,8 @@ public final class Core extends JavaPlugin {
                 new MessageCommand(),
                 new ReplyCommand(),
                 new ListCommand(),
-                new KillCommand()
+                new KillCommand(),
+                new CommandSpyCommand()
         );
     }
     private void register(BaseCommand... commands) {
