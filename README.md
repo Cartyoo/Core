@@ -39,10 +39,12 @@ Some things in Core need extra setup, please refer to https://github.com/Cartyoo
 - /feed [player]
 - /hat|/helmet
 - /kill [player]
+- /commandspy <enable|disable>
 
 # Other (Events/Listeners)
 - Join & Leave Messages
 - Chat Format
+- Command Spy
 
 # Why choose Core?
 - Core is fully configurable via ONE file; change every message, prefix, and more in the config YAML file.
