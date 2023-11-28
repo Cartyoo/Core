@@ -14,5 +14,3 @@
 Once all above is completed, your /list command will now work!
 
 If you have any issues setting this up, or need help setting it up, feel free to dm `herbert__` on Discord!
-
-
